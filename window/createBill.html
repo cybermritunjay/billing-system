@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Create Bill</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/css/createbill.css">
+		<link rel="stylesheet" href="../assets/css/bill.css">
+	</head>
+	<!-- MultiStep Form -->
+	<div class="row">
+		<div class="col-md-12 col-md-offset-3">
+			<form id="userform">
+				
+				<fieldset class="form">
+					<h2 class="fs-title">Personal Details</h2>
+					<h3 class="fs-subtitle">Tell us something more about you</h3>
+					<input type="number" list="customers" name="mobile_number" onkeypress="fetchuser(this.value)" onfocusout="updateform()" placeholder="Mobile Number" class="half">
+						
+				
+					<datalist id="customers" >
+					    
+					  </datalist>
+					<input type=email"" name="email" placeholder="Email Address" class="half">
+					<input type="text" name="customer_name" placeholder="Customer Name">
+					<input type="text" name="fathers_name" placeholder="Customers Fathers Name">
+					<input type="text" name="address" placeholder="Address Line">
+					<input type="text" name="city" placeholder="City" class="half">
+					<input type="text" name="district" placeholder="District" class="half">
+					<input type="state" name="state" placeholder="State" class="half">
+					<input type="number" name="zip" placeholder="Zip Code" class="half">
+					<input type="text" name="refrence" placeholder="Refrence Person">
+					<input type="button" name="next" class="next action-button" value="Next"/>
+				</fieldset>
+				<fieldset>
+					<iframe src="bill.html"
+   width="100%" id="rec"></iframe>
+							<input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+					
+				</fieldset>
+				
+			</form>
+		</div>
+	</div>
+	<!-- /.MultiStep Form -->
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<script src="../assets/vendor/jquery/jquery.js"></script>
+	<script src="../assets/vendor/jquery/jquery.js"></script>
+	<script src="../assets/vendor/bootstrap/js/popper.js"></script>
+	<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../assets/vendor/jquery/jquery-easing.js"></script>
+	<script src="../assets/js/createbill.js"></script>
+<script>if (window.module) module = window.module;</script>
+
+</body>
+</html>

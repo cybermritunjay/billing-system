@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../assets/css/bill.css">
+</head>
+<body>
+
+
+<div id="page-wrap">
+						<textarea id="header">INVOICE</textarea>
+						
+						<div id="identity">
+							
+							<textarea id="address">
+							XYZ ज्वेलर्स
+							खारी फाटक
+							विदिशा, एमपी 464001
+							फ़ोन: (555) 555-5555</textarea>
+							<div id="logo">
+								<img id="image" src="../assets/img/logo.png" alt="logo" />
+							</div>
+							
+						</div>
+						
+						<div style="clear:both"></div>
+						
+						<div id="customer">
+							<textarea id="customer-title">xyz जौहरी c/o abc जौहरी</textarea>
+							<table id="meta">
+								<tr>
+									<td class="meta-head">Invoice #</td>
+									<td><textarea>000123</textarea></td>
+								</tr>
+								<tr>
+									<td class="meta-head">
+									दिनांक</td>
+									<td><textarea id="date">December 15, 2009</textarea></td>
+								</tr>
+								<tr>
+									<td class="meta-head">
+									देय राशि</td>
+									<td><div class="due">₹00.00</div></td>
+								</tr>
+							</table>
+							
+						</div>
+						
+						<table id="items">
+							
+							<tr class="item-row">
+								<th class="item-name">विवरण</th>
+								<th>भाव</th>
+								<th>वजन</th>
+								<th>मूल्य</th>
+							</tr>
+							
+							
+							<tr id="hiderow">
+								<td colspan="5"><a id="addrow" href="javascript:;" title="Add a row">Add a row</a></td>
+							</tr>
+							
+							<tr>
+								<td colspan="2" class="blank"> </td>
+								<td colspan="2" class="total-line">उप-योग</td>
+								<td class="total-value"><div id="subtotal">₹00.00</div></td>
+							</tr>
+							<tr>
+								<td colspan="2" class="blank"> </td>
+								<td colspan="2" class="total-line">योग</td>
+								<td class="total-value"><div id="total">₹00.00</div></td>
+							</tr>
+							<tr>
+								<td colspan="2" class="blank"> </td>
+								<td colspan="2" class="total-line">राशि का भुगतान</td>
+								<td class="total-value"><textarea id="paid">₹0.00</textarea></td>
+							</tr>
+							<tr>
+								<td colspan="2" class="blank"> </td>
+								<td colspan="2" class="total-line balance">शेष राशि</td>
+								<td class="total-value balance"><div class="due">₹00.00</div></td>
+							</tr>
+							
+						</table>
+						
+						<div id="terms">
+							<h5>नियम और शर्तें</h5>
+							
+							ठीक 30 दिन। का वित्त प्रभार 30 दिनों के बाद अवैतनिक शेष राशि पर <input type="number" name="tax" style="width:20px;border: 0;" value="1.5" onkeypress="this.style.width = ((this.value.length + 1) * 11) + 'px';">% किया जाएगा।
+						</div>
+						<input type="button" name="Print" class="action-button" value="Print" onclick='javascript:printLayer("page-wrap")' />
+					</div>
+	<script src="../assets/vendor/jquery/jquery.js"></script>
+	<script src="../assets/vendor/bootstrap/js/popper.js"></script>
+	<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../assets/vendor/jquery/jquery-easing.js"></script>
+	<script src="../assets/js/createbill.js"></script>
+			</body>
+</html>

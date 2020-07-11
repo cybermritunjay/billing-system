@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Billing System| Create Database</title>
+</head>
+<body>
+<h1>Create Database</h1>
+<button id="createBD" class="login100-form-btn">
+CREATE DATABASE
+</button>
+
+	<script>
+		var button = document.getElementById('createBD');
+		button.addEventListener('click',function(){
+			var Datastore = require('nedb');
+ 
+			db = {};
+			db.users = new Datastore('../assets/databases/users.db');
+			db.products = new Datastore('../assets/databases/products.db');
+			db.customers = new Datastore('../assets/databases/customers.db');
+			db.sales = new Datastore('../assets/databases/sales.db');
+
+			db.users.loadDatabase();
+			db.products.loadDatabase();
+			db.customers.loadDatabase();
+			db.sales.loadDatabase();
+			var doc = { username: 'mritunjay'
+               , password: 'Mp16m@0636'
+               , accType: 'emp'
+               , fullname: 'mritunjay Pathak'
+               , dateCreated: new Date()
+               };
+
+				db.users.insert(doc, function (err, newDoc) {   
+					console.log("inserted");
+				});
+				db.users.find({ system: 'solar' }, function (err, docs) {
+  					console.log(docs);
+					});
+					});
+
+	</script>
+
+</body>
+</html>
